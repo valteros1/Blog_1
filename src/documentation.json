@@ -1,0 +1,346 @@
+{
+    "openapi":"3.0.2",
+    "info": {
+        "title":"API Challenges",
+        "version":"1.0"
+    },
+    "servers": [
+        {"url":"http://localhost:3000"}
+    ],
+    "paths": {
+        "/challenges" : {
+            "get": { 
+              "description":  "Takes challenges from kehale",
+              "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "Application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "challenges":{
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "string",
+                                                        "example": "1"
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": " Tee midagi kehale "
+                                                    },
+                                                    "content": {
+                                                        "type": "string",
+                                                        "example": " Tegevuse sisu "
+                                                },
+                                                
+                                                    "author": {
+                                                        "type": "string",
+                                                        "example": " Valter "
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+                
+
+        }
+    }
+}, "/challenges/{id}": {
+    "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "Challengei identifikaator",
+          "schema": {
+            "type": "number"
+          }
+        }
+      ],
+    "get": {
+        "description": " Get challenge by id",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "Challenge specific id",
+                "content": {
+                    "Application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "course":{
+                                        "type": "object",
+                                        "properties": {
+                                            "challenges":{
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "1"
+                                                        },
+                                                        "title": {
+                                                            "type": "string",
+                                                            "example": " Tee midagi kehale "
+                                                        },
+                                                        "content": {
+                                                            "type": "string",
+                                                            "example": " Tegevuse sisu "
+                                                    },
+                                                    
+                                                        "author": {
+                                                            "type": "string",
+                                                            "example": " Valter "
+                                                }
+                                        }
+                                    }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+            }
+            }
+            }
+            },
+            "/challengesVaimule" : {
+                "get": { 
+                  "description":  "Takes all challenges from Vaimule",
+                  "parameters": [],
+                    "responses": {
+                        "200": {
+                            "description": "",
+                            "content": {
+                                "Application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "challenges":{
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string",
+                                                            "example": "1"
+                                                        },
+                                                        "title": {
+                                                            "type": "string",
+                                                            "example": " Tee midagi vaimule "
+                                                        },
+                                                        "content": {
+                                                            "type": "string",
+                                                            "example": " Tegevuse sisu "
+                                                    },
+                                                    
+                                                        "author": {
+                                                            "type": "string",
+                                                            "example": " Valter "
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                    
+    
+            }
+        }
+    }, "/challengesVaimule/{id}": {
+        "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "Challengei identifikaator",
+              "schema": {
+                "type": "number"
+              }
+            }
+          ],
+        "get": {
+            "description": " Get challenge by id",
+            "parameters": [],
+            "responses": {
+                "200": {
+                    "description": "Challenge specific id",
+                    "content": {
+                        "Application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "course":{
+                                            "type": "object",
+                                            "properties": {
+                                                "challenges":{
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string",
+                                                                "example": "1"
+                                                            },
+                                                            "title": {
+                                                                "type": "string",
+                                                                "example": " Tee midagi vaimule "
+                                                            },
+                                                            "content": {
+                                                                "type": "string",
+                                                                "example": " Tegevuse sisu "
+                                                        },
+                                                        
+                                                            "author": {
+                                                                "type": "string",
+                                                                "example": " Valter "
+                                                    }
+                                            }
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+                
+                }}}},  "/challengesToitumine" : {
+                    "get": { 
+                      "description":  "Takes all challenges from Toitumine",
+                      "parameters": [],
+                        "responses": {
+                            "200": {
+                                "description": "",
+                                "content": {
+                                    "Application/json": {
+                                        "schema": {
+                                            "type": "object",
+                                            "properties": {
+                                                "challenges":{
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "string",
+                                                                "example": "1"
+                                                            },
+                                                            "title": {
+                                                                "type": "string",
+                                                                "example": " Söö midagi kasulikku "
+                                                            },
+                                                            "content": {
+                                                                "type": "string",
+                                                                "example": " Söö "
+                                                        },
+                                                        
+                                                            "author": {
+                                                                "type": "string",
+                                                                "example": " Valter "
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                        
+        
+                }
+            }
+        }, "/challengesToitumine/{id}": {
+            "parameters": [
+                {
+                  "name": "id",
+                  "in": "path",
+                  "required": true,
+                  "description": "Challengei identifikaator",
+                  "schema": {
+                    "type": "number"
+                  }
+                }
+              ],
+            "get": {
+                "description": " Get challenge by id",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Challenge specific id",
+                        "content": {
+                            "Application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "course":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "challenges":{
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "id": {
+                                                                    "type": "string",
+                                                                    "example": "1"
+                                                                },
+                                                                "title": {
+                                                                    "type": "string",
+                                                                    "example": " Tee midagi kõhule "
+                                                                },
+                                                                "content": {
+                                                                    "type": "string",
+                                                                    "example": " söö midagi "
+                                                            },
+                                                            
+                                                                "author": {
+                                                                    "type": "string",
+                                                                    "example": " Valter "
+                                                        }
+                                                }
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+                    
+                    }}}}
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+}
+         
+          
+            

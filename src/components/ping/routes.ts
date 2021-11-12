@@ -5,6 +5,5 @@ const router: Router = express.Router();
 
 router
   .get('/', pingController);
-  
 
 export default router;
